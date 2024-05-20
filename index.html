@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisoverzicht</title>
+</head>
+<body>
+    <header>
+        <h1>Plaats hieronder een reis die je niet wilt vergeten!</h1>
+    </header>
+    <main>
+        <form id="reis-form">
+            <label for="land">In welk land was jouw reis?</label>
+            <input id="land" type="text" required>
+            <label for="land">In welk stad was jouw reis?</label>
+            <input id="stad" type="text" required>
+            <label for="beschrijving-reis">Wat is er allemaal gebeurt tijdens jouw reis?</label>
+            <textarea id="beschrijving-reis" cols="40" rows="10"></textarea>
+            <label for="reis-nummer">Van 1 tot 10, hoe goed ging jouw reis?</label>
+            <input id="reis-nummer" type="number" min="1" max="10" required>
+            <input id="submit-knop" type="submit">
+        </form>
+        <div id="antwoord"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
