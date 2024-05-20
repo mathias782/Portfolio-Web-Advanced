@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Reisoverzicht</title>
 </head>
 <body>
     <header>
         <h1>Plaats hieronder een reis die je niet wilt vergeten!</h1>
     </header>
+    <hr>
     <main>
-        <form id="reis-form">
-            <label for="land">In welk land was jouw reis?</label>
-            <input id="land" type="text" required>
-            <label for="land">In welk stad was jouw reis?</label>
-            <input id="stad" type="text" required>
-            <label for="beschrijving-reis">Wat is er allemaal gebeurt tijdens jouw reis?</label>
-            <textarea id="beschrijving-reis" cols="40" rows="10"></textarea>
-            <label for="reis-nummer">Van 1 tot 10, hoe goed ging jouw reis?</label>
-            <input id="reis-nummer" type="number" min="1" max="10" required>
-            <input id="submit-knop" type="submit">
-        </form>
+        <div id="container">
+            <form id="reis-form">
+                <div>
+                    <label for="land">In welk land was jouw reis?</label>
+                <input id="land" type="text" required>
+                </div>
+                <div>
+                    <label for="land">In welk stad was jouw reis?</label>
+                    <input id="stad" type="text" required>
+                </div>
+                <div>
+                    <label for="beschrijving-reis">Wat is er allemaal gebeurt tijdens jouw reis?</label>
+                    <div>
+                        <textarea id="beschrijving-reis" cols="40" rows="10"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <label for="reis-nummer">Van 1 tot 10, hoe goed ging jouw reis?</label>
+                    <input id="reis-nummer" type="number" min="1" max="10" required>
+                </div>
+                <input id="submit-knop" type="submit">
+            </form>
+        </div>
         <div id="antwoord"></div>
     </main>
     <script src="script.js"></script>
