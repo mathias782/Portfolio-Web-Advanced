@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Reisoverzicht</title>
+    <title>Reisbeoordeling</title>
 </head>
 <body>
     <header>
         <h1>Plaats hieronder een reis die je niet wilt vergeten!</h1>
+        <hr>
     </header>
-    <hr>
     <main>
-        <div id="container">
-            <form id="reis-form">
-                <div>
-                    <label for="land">In welk land was jouw reis?</label>
+        <form id="reis-form">
+            <div>
+                <label for="land">In welk land was jouw reis?</label>
                 <input id="land" type="text" required>
-                </div>
-                <div>
-                    <label for="land">In welk stad was jouw reis?</label>
-                    <input id="stad" type="text" required>
-                </div>
-                <div>
-                    <label for="beschrijving-reis">Wat is er allemaal gebeurt tijdens jouw reis?</label>
-                    <div>
-                        <textarea id="beschrijving-reis" cols="40" rows="10"></textarea>
-                    </div>
-                </div>
-                <div>
-                    <label for="reis-nummer">Van 1 tot 10, hoe goed ging jouw reis?</label>
-                    <input id="reis-nummer" type="number" min="1" max="10" required>
-                </div>
-                <input id="submit-knop" type="submit">
-            </form>
-        </div>
+            </div>
+            <div>
+                <label for="stad">In welk stad was jouw reis?</label>
+                <input id="stad" type="text" required>
+            </div>
+            <div>
+                <label for="beschrijving-reis">Wat is er allemaal gebeurt tijdens jouw reis?</label>
+            </div>
+            <div>
+                <textarea id="beschrijving-reis" cols="40" rows="10"></textarea>
+            </div>
+            <div>
+                <label for="reis-cijfer">Van 1 tot 10, hoe goed ging jouw reis?</label>
+                <input id="reis-cijfer" type="number" min="1" max="10" required>
+            </div>
+            <input id="submit-knop" type="submit">
+        </form>
+        <hr>
         <div id="antwoord"></div>
     </main>
+    <aside>
+        <div id="geschiedenis">
+            <h3>Kijk naar jouw vorige beoordelingen</h3>
+            <div>
+                <p>info vorige reis</p>
+            </div>
+        </div>
+    </aside>
     <script src="script.js"></script>
 </body>
 </html>
