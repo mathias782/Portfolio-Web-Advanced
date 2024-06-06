@@ -1,20 +1,99 @@
 body {
+    font-family: Arial, sans-serif;
     display: grid;
     grid-template-areas: 
         'header header'
         'main aside';
-    grid-template-columns: 70% auto;
+    grid-template-columns: 1fr 300px;
     grid-template-rows: auto;
+    gap: 20px;
+    padding: 10px;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-header {grid-area: header;}
-main {grid-area: main;}
-aside {grid-area: aside;}
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+aside {
+    grid-area: aside;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 #reis-form {
-    background-color: whitesmoke;
-    padding: 1em;
-    margin: 0 0 0 2em;
-    border-width: 1px;
-    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#reis-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#reis-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#reis-form input, #reis-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#submit-knop {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: auto;
+    margin-top: 20px;
+}
+
+#submit-knop:hover {
+    background-color: #45a049;
+}
+
+#antwoord {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#geschiedenis {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#geschiedenis h3 {
+    margin-top: 0;
 }

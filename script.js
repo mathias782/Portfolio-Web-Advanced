@@ -17,20 +17,20 @@ function controleSubmit(event){
     event.preventDefault();
     if(land == ""){
         let antwoord = document.getElementById('antwoord');
-        antwoord.innerHTML = `<p>Je moet het land van jouw reis nog invullen</p>`;
+        antwoord.innerHTML = `<p>Je moet het land van jouw reis nog invullen!</p>`;
         antwoord.style.color = "red";
         antwoord.style.textAlign = "center";
     }else if(stad == ""){
         let antwoord = document.getElementById('antwoord');
-        antwoord.innerHTML = `<p>Je moet de stad van jouw reis nog invullen</p>`;
+        antwoord.innerHTML = `<p>Je moet de stad van jouw reis nog invullen!</p>`;
         antwoord.style.color = "red";
     }else if(cijfer == ""){
         let antwoord = document.getElementById('antwoord');
-        antwoord.innerHTML = `<p>Je moet het cijfer van jouw reis nog invullen</p>`;
+        antwoord.innerHTML = `<p>Je moet het cijfer van jouw reis nog invullen!</p>`;
         antwoord.style.color = "red";
     }else if(cijfer < 1 || cijfer > 10){
         let antwoord = document.getElementById('antwoord');
-        antwoord.innerHTML = `<p>Het cijfer van jouw reis moet tussen 1 en 10 zijn</p>`;
+        antwoord.innerHTML = `<p>Het cijfer van jouw reis moet tussen 1 en 10 zijn!</p>`;
         antwoord.style.color = "red";
     }else{
         antwoordSubmit(event);

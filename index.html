@@ -9,7 +9,6 @@
 <body>
     <header>
         <h1>Plaats hieronder een reis die je niet wilt vergeten!</h1>
-        <hr>
     </header>
     <main>
         <form id="reis-form">
@@ -18,20 +17,18 @@
                 <input id="land" type="text" required>
             </div>
             <div>
-                <label for="stad">In welk stad was jouw reis?</label>
+                <label for="stad">In welke stad was jouw reis?</label>
                 <input id="stad" type="text" required>
             </div>
             <div>
-                <label for="beschrijving-reis">Wat is er allemaal gebeurt tijdens jouw reis?</label>
-            </div>
-            <div>
+                <label for="beschrijving-reis">Wat is er allemaal gebeurd tijdens jouw reis?</label>
                 <textarea id="beschrijving-reis" cols="40" rows="10"></textarea>
             </div>
             <div>
-                <label for="reis-cijfer">Van 1 tot 10, hoe goed ging jouw reis?</label>
+                <label for="reis-cijfer">Van 1 tot 10, hoe goed was jouw reis?</label>
                 <input id="reis-cijfer" type="number" min="1" max="10" required>
             </div>
-            <input id="submit-knop" type="submit">
+            <input id="submit-knop" type="submit" value="Verzenden">
         </form>
         <hr>
         <div id="antwoord"></div>
