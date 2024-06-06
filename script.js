@@ -1,20 +1,21 @@
 'use strict'
 
-document.getElementById('submit-knop').addEventListener("click", controleSubmit);
-
-function antwoordSubmit(event){
-    event.preventDefault();
-    let antwoord = document.getElementById('antwoord');
-    antwoord.innerHTML = `<p>Submitten is gelukt!</p>`;
-    antwoord.style.color = "green";
+function ReisBeoordeling(land, stad, beschrijving, cijfer){
+    this.land = land;
+    this.stad = stad;
+    this.beschrijving = beschrijving;
+    this.cijfer = cijfer;
+    this.maakBeoordeling = function(data){
+        [this.land, this.stad, this.beschrijving, this.cijfer] = data;
+    }
 }
 
-function controleSubmit(event){
+document.getElementById('submit-knop').addEventListener("click", (event) =>{
+    event.preventDefault();
     let land = document.getElementById('land').value;
     let stad = document.getElementById('stad').value;
-    // let beschrijving = document.getElementById('beschrijving-reis').value;
+    let beschrijving = document.getElementById('beschrijving-reis').value;
     let cijfer = document.getElementById('reis-cijfer').value;
-    event.preventDefault();
     if(land == ""){
         let antwoord = document.getElementById('antwoord');
         antwoord.innerHTML = `<p>Je moet het land van jouw reis nog invullen!</p>`;
@@ -33,6 +34,26 @@ function controleSubmit(event){
         antwoord.innerHTML = `<p>Het cijfer van jouw reis moet tussen 1 en 10 zijn!</p>`;
         antwoord.style.color = "red";
     }else{
-        antwoordSubmit(event);
+        let data = [];
+        data.push(land);
+        data.push(stad);
+        data.push(beschrijving);
+        data.push(cijfer);
+        antwoordSubmit(data, event);
     }
+});
+
+function antwoordSubmit(data, event){
+    event.preventDefault();
+    let antwoord = document.getElementById('antwoord');
+    antwoord.innerHTML = `<p>Submitten is gelukt!</p>`;
+    antwoord.style.color = "green";
+    let reisBeoordeling = new ReisBeoordeling();
+    reisBeoordeling.maakBeoordeling(data);
+    let geschiedenis = document.getElementById('geschiedenis-container');
+    geschiedenis.innerHTML = `
+        <h4>${reisBeoordeling.land}: ${reisBeoordeling.stad}</h4>
+        <p>${reisBeoordeling.beschrijving}</p>
+        <h4>${reisBeoordeling.cijfer}</h4>
+    `;
 }
