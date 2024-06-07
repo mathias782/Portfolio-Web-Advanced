@@ -119,3 +119,12 @@ Dit project is een webapplicatie waarmee gebruikers hun reiservaringen kunnen in
 - `script.js`: Bevat de JavaScript-logica voor het verwerken van formulierindiening, ophalen van gegevens en bijwerken van de geschiedenis.
 - `index.css`: Bevat de CSS-stijlen voor de applicatie.
 - `config.json`: Bevat de configuratie voor de API URL en sleutel.
+
+## Bronnen
+
+- Cursus Web Advanced
+- [Dynamic Country State City Dependent Dropdown List using JavaScript Fetch API (YouTube)](https://www.youtube.com/watch?v=WXg2RVhSrdw)
+- [Country State City API](https://countrystatecity.in/)
+- [Storage setItem() Method (W3Schools)](https://www.w3schools.com/jsref/met_storage_setitem.asp)
+- [JavaScript Callbacks (W3Schools)](https://www.w3schools.com/js/js_callback.asp)
+- [ChatGPT](https://chatgpt.com/share/cb0885aa-96f5-48de-85c4-3c48faa25e13)
