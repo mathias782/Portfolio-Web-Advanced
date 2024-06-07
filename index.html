@@ -12,6 +12,18 @@
     </header>
     <main>
         <form id="reis-form">
+            <div class="select_option">
+                <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
+                    <option selected>Select Country</option>
+                </select>
+                <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+                    <option selected>Select State</option>
+                </select>
+                <select class="form-select city" aria-label="Default select example">
+                    <option selected>Select City</option>
+                </select>
+            </div>
+            <hr>
             <div>
                 <label for="land">In welk land was jouw reis?</label>
                 <input id="land" type="text" required>
@@ -37,7 +49,7 @@
         <div id="geschiedenis">
             <h3>Kijk naar jouw vorige beoordelingen</h3>
             <div id="geschiedenis-container">
-                
+
             </div>
         </div>
     </aside>
