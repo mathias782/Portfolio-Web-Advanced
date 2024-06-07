@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    display: grid;
+    display: grid; /* Gebruik van CSS Grid */
     grid-template-areas: 
         'header header'
         'main aside';
@@ -14,7 +14,6 @@ body {
 
 header {
     grid-area: header;
-    background-color: #4CAF50;
     color: white;
     padding: 20px;
     text-align: center;
@@ -66,7 +65,6 @@ aside {
 }
 
 #submit-button {
-    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 15px;
@@ -75,10 +73,6 @@ aside {
     align-self: center;
     width: auto;
     margin-top: 20px;
-}
-
-#submit-button:hover {
-    background-color: #45a049;
 }
 
 #response {
@@ -110,4 +104,29 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+#history-container div {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#history-container div:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes colorChange {
+    from {
+        background-color: #3498db;
+    }
+    to {
+        background-color: #4CAF50;
+    }
+}
+
+header, #submit-button {
+    animation: colorChange 2s ease-in-out alternate infinite; /* Basis CSS Animatie */
 }
