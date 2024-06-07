@@ -38,7 +38,7 @@ aside {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#reis-form {
+#travel-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -49,23 +49,23 @@ aside {
     width: 100%;
 }
 
-#reis-form div {
+#travel-form div {
     display: flex;
     flex-direction: column;
 }
 
-#reis-form label {
+#travel-form label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#reis-form input, #reis-form textarea {
+#travel-form input, #travel-form textarea, #travel-form select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-#submit-knop {
+#submit-button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -77,23 +77,37 @@ aside {
     margin-top: 20px;
 }
 
-#submit-knop:hover {
+#submit-button:hover {
     background-color: #45a049;
 }
 
-#antwoord {
+#response {
     margin-top: 20px;
     font-size: 1.2em;
     text-align: center;
 }
 
-#geschiedenis {
+#history {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#geschiedenis h3 {
+#history h3 {
     margin-top: 0;
+}
+
+#history-container h4 {
+    margin: 10px 0;
+}
+
+#history-container p {
+    margin: 5px 0;
+}
+
+.select-option {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

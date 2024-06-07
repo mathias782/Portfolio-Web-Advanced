@@ -1,55 +1,52 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Reisbeoordeling</title>
+    <title>Travel Review</title>
 </head>
 <body>
     <header>
-        <h1>Plaats hieronder een reis die je niet wilt vergeten!</h1>
+        <h1>Submit a travel experience you don't want to forget!</h1>
     </header>
     <main>
-        <form id="reis-form">
-            <div class="select_option">
-                <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
+        <form id="travel-form">
+            <div class="select-option">
+                <label for="country">In which country was your trip?</label>
+                <select id="country" class="form-select country" aria-label="Default select example" onchange="loadStates()" required>
                     <option selected>Select Country</option>
                 </select>
-                <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+            </div>
+            <div class="select-option">
+                <label for="state">In which state was your trip?</label>
+                <select id="state" class="form-select state" aria-label="Default select example" onchange="loadCities()" required>
                     <option selected>Select State</option>
                 </select>
-                <select class="form-select city" aria-label="Default select example">
+            </div>
+            <div class="select-option">
+                <label for="city">In which city was your trip?</label>
+                <select id="city" class="form-select city" aria-label="Default select example" required>
                     <option selected>Select City</option>
                 </select>
             </div>
-            <hr>
             <div>
-                <label for="land">In welk land was jouw reis?</label>
-                <input id="land" type="text" required>
+                <label for="trip-description">What happened during your trip?</label>
+                <textarea id="trip-description" cols="40" rows="10"></textarea>
             </div>
             <div>
-                <label for="stad">In welke stad was jouw reis?</label>
-                <input id="stad" type="text" required>
+                <label for="trip-rating">On a scale of 1 to 10, how good was your trip?</label>
+                <input id="trip-rating" type="number" min="1" max="10" required>
             </div>
-            <div>
-                <label for="beschrijving-reis">Wat is er allemaal gebeurd tijdens jouw reis?</label>
-                <textarea id="beschrijving-reis" cols="40" rows="10"></textarea>
-            </div>
-            <div>
-                <label for="reis-cijfer">Van 1 tot 10, hoe goed was jouw reis?</label>
-                <input id="reis-cijfer" type="number" min="1" max="10" required>
-            </div>
-            <input id="submit-knop" type="submit" value="Verzenden">
+            <input id="submit-button" type="submit" value="Submit">
         </form>
         <hr>
-        <div id="antwoord"></div>
+        <div id="response"></div>
     </main>
     <aside>
-        <div id="geschiedenis">
-            <h3>Kijk naar jouw vorige beoordelingen</h3>
-            <div id="geschiedenis-container">
-
+        <div id="history">
+            <h3>View your previous reviews</h3>
+            <div id="history-container">
             </div>
         </div>
     </aside>
